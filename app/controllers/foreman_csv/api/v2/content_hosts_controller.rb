@@ -14,8 +14,10 @@ module ForemanCSV
   class Api::V2::ContentHostsController < Api::V2::ApiController
     skip_before_filter :check_content_type, :only => [:import_content_hosts]
 
-    def resource_class
-      @resource_class = ::Katello::System
+    resource_description do
+      resource_id 'csv'
+      api_version 'v2'
+      api_base_url '/csv/api/v2'
     end
 
     api :POST, "/content_hosts", N_("Upload content-hosts CSV file")

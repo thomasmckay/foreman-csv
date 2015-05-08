@@ -24,10 +24,5 @@ module ForemanCSV
     respond_to :json
     before_filter :authorize
 
-    resource_description do
-      resource_id 'csv'
-      api_version 'v2'
-      api_base_url '/csv/api/v2'
-    end
   end
 end

@@ -28,7 +28,6 @@ module ForemanCSV
         ["#{ForemanCSV::Engine.root}/app/lib/foreman_csv/actions"])
     end
 
-
     rake_tasks do
       Rake::Task['db:seed'].enhance do
         ForemanCSV::Engine.load_seed
