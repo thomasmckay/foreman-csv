@@ -1,5 +1,5 @@
 require 'foreman_csv/engine'
 require 'deface'
 
-module ForemanSAM
+module ForemanCSV
 end
