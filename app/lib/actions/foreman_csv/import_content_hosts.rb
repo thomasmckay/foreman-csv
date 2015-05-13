@@ -18,7 +18,7 @@ module Actions
       def plan(content)
         begin
           temp_file = File.new(File.join("#{Rails.root}/tmp", "csv_#{SecureRandom.hex(10)}.csv"),
-                               'w+', 0600)
+                               'wb', 0600)
           temp_file.write content.read
         ensure
           temp_file.close
