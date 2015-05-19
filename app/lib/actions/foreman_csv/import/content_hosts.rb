@@ -138,6 +138,7 @@ module Actions
           CSV.parse_line(line[HOSTCOLLECTIONS]).each do |hostcollection_name|
             host_collection = ::Katello::HostCollection.find_by_name(hostcollection_name)
             host_collection.system_ids << content_host.id
+            host_collection.system_ids = (host_collection.system_ids + [content_host.id]).uniq
             host_collection.save!
           end
         end
