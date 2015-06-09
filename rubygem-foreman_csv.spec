@@ -30,7 +30,7 @@ Requires: %{?scl_prefix}rubygem-katello
 Requires: %{?scl_prefix}rubygems
 BuildRequires: %{?scl_prefix}rubygems
 BuildRequires: %{?scl_prefix}rubygems-devel
-BuildRequires: foreman-assets >= 1.7.0
+BuildRequires: foreman-plugin >= 1.8
 %if 0%{?rhel} > 6
 Requires: ruby(release) = 2.0.0
 BuildRequires: ruby(release) = 2.0.0
