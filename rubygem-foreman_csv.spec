@@ -54,6 +54,11 @@ CSV plugin for Foreman and Katello.
 %{__install} --directory .%{gem_dir}
 %{?scl:scl enable %{scl} "}
 gem install --local --install-dir .%{gem_dir} --force %{SOURCE0} --no-rdoc --no-ri
+
+pushd /usr/share/foreman
+%{scl_rake} apipie:cache
+popd
+
 %{?scl:"}
 
 %build
